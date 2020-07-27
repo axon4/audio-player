@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset='UTF-8'>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+		<title>Audio Player</title>
+		<link rel='icon' type='image/png' href='favicon.png'>
+		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'/>
+		<link rel='stylesheet' href='style.css'>
+	</head>
+	<body>
+		<div class='player-container'>
+			<!-- Audio -->
+			<div class='img-container'>
+				<img src='./img/jacinto-1.jpg' alt='Cover'>
+			</div>
+			<h2 id='title'>The Qur'ān Changed Me</h2>
+			<h3 id='artist'>Khālid Maḥjūb</h3>
+			<audio src="./audio/The Qur'ān Changed Me.mp3"></audio>
+			<!-- Progress -->
+			<div id='progress-container' class='progress-container'>
+				<div id='progress' class='progress'></div>
+				<div class='duration-wrapper'>
+					<span id='current-time'>0:00</span>
+					<span id='duration'>2:06</span>
+				</div>
+			</div>
+			<!-- Controls -->
+			<div class='player-controls'>
+				<i id='previous' class='fas fa-backward' title='Previous'></i>
+				<i id='play' class='fas fa-play main-button' title='Play'></i>
+				<i id='next' class='fas fa-forward' title='Next'></i>
+			</div>
+		</div>
+		<script src='script.js'></script>
+	</body>
+</html>
