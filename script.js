@@ -16,18 +16,18 @@ const audioFiles = [
 		artist: 'Khālid Maḥjūb - خالد محجوب'
 	},
 	{
-		name: 'Sūrah an-Naḥl 63-69',
-		displayName: 'Sūrah an-Naḥl (The Bee) 63-69 - سورة النحل',
+		name: 'Sūraḣ an-Naḥl 63-69',
+		displayName: 'Sūraḣ an-Naḥl (The Bee) 63–69 - سورة النحل',
 		artist: 'Abdulbasit Abdussamad - عبد الباسط عبد الصمد'
 	},
 	{
-		name: 'Sūrah al-Isrā\' 1-38',
-		displayName: 'Sūrah al-Isrā\' (The Night Journey) 1-38 - سورة الإسراء',
-		artist: 'Abdelmalik Abouaicha - عبد الملك أبو عائشة'
+		name: 'Sūraḣ al-Isrā\' 1-38',
+		displayName: 'Sūraḣ al-Isrā\' (The Night Journey) 1–38 - سورة الإسراء',
+		artist: 'Souleyman Al Mali - سليمان المالي'
 	},
 	{
-		name: 'Sūrah Ibrāhīm 42-48',
-		displayName: 'Sūrah Ibrāhīm (Abraham) 42-48 - سورة إبراهيم',
+		name: 'Sūraḣ Ibrāhīm 42-48',
+		displayName: 'Sūraḣ Ibrāhīm (Abraham) 42–48 - سورة إبراهيم',
 		artist: 'Aftab Ahmed - أفطاب أحمد'
 	}
 ];
@@ -54,7 +54,7 @@ function loadAudio(file) {
 	title.textContent = file.displayName;
 	artist.textContent = file.artist;
 	audio.src = `./audio/${file.name}.mp3`;
-	image.src = `./img/${file.name}.jpg`
+	image.src = `./img/${file.name}.jpg`;
 };
 
 function previousAudio() {
