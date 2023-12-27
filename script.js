@@ -13,12 +13,12 @@ const audioFiles = [
 	{
 		name: 'The Qur\'ān Changed Me',
 		displayName: 'The Qur\'ān Changed Me - القرآن غيرني',
-		artist: 'Khālid Maḥjūb - خالد محجوب'
+		artist: 'Khalid Mahjoub - خالد محجوب'
 	},
 	{
 		name: 'Sūraṫ an-Naḥl 63-69',
 		displayName: 'Sūraṫ an-Naḥl (The Bee) 63–69 - سورة النحل',
-		artist: 'Abdulbasit Abdussamad - عبد الباسط عبد الصمد'
+		artist: 'AbdulBasit AbdusSamad - عبد الباسط عبد الصمد'
 	},
 	{
 		name: 'Sūraṫ al-Isrā\' 1-38',
@@ -29,6 +29,81 @@ const audioFiles = [
 		name: 'Sūraṫ Ibrāhīm 42-48',
 		displayName: 'Sūraṫ Ibrāhīm (Abraham) 42–48 - سورة إبراهيم',
 		artist: 'Aftab Ahmed - أفطاب أحمد'
+	},
+	{
+		name: 'Asmā\' al-Husná (Beautiful Names)',
+		displayName: 'Asmā\' al-Husná (Beautiful Names) - أسماء الحسنى',
+		artist: 'Ahmed AlNufais - أحمد النفيس'
+	},
+	{
+		name: 'How Does One Call You%3F',
+		displayName: 'How Does One Call You? - كيف يناجيك',
+		artist: 'AbdiRashid Sufi - عبد الرشيد صوفي'
+	},
+	{
+		name: 'And God is My Strength (Ash-Shāṭibiyyaḣ)',
+		displayName: 'And God is My Strength (Ash-Shāṭibiyyaḣ) - وبالله حولي (الشاطبية)',
+		artist: 'AbdiRashid Sufi - عبد الرشيد صوفي'
+	},
+	{
+		name: 'O God, ReWard Muḥammad for Us',
+		displayName: 'O God, ReWard Muḥammad for Us - اللهم جازي عنا محمدا',
+		artist: 'AbdiRashid Sufi - عبد الرشيد صوفي'
+	},
+	{
+		name: 'O He Who ReVeals the Beautiful',
+		displayName: 'O He Who ReVeals the Beautiful - يا من أظهر الجميل',
+		artist: 'AbdiRashid Sufi - عبد الرشيد صوفي'
+	},
+	{
+		name: 'How Can it EnCompass You%3F',
+		displayName: 'How Can it EnCompass You? - كيف يحيط بك',
+		artist: 'AbdiRashid Sufi - عبد الرشيد صوفي'
+	},
+	{
+		name: 'O God, O Lover...',
+		displayName: 'O God, O Lover... - اللهم يا حبيب',
+		artist: 'AbdiRashid Sufi - عبد الرشيد صوفي'
+	},
+	{
+		name: 'How Could the Palms Hold Back%3F',
+		displayName: 'How Could the Palms Hold Back? - كيف كفت الأكف',
+		artist: 'AbdiRashid Sufi - عبد الرشيد صوفي'
+	},
+	{
+		name: 'BeLoved of the Hearts',
+		displayName: 'BeLoved of the Hearts - حبيب القلوب',
+		artist: 'Osama Yousif / Khabbab Al-Amin - أسامة يوسف / خباب الأمين'
+	},
+	{
+		name: 'Know YourSelf',
+		displayName: 'Know YourSelf - أعرف نفسك',
+		artist: 'Anas Mohammeden / Osama Yousif - أنس محمدين / أسامة يوسف'
+	},
+	{
+		name: 'I Will Get Married',
+		displayName: 'I Will Get Married - حا أزوج',
+		artist: 'Anas Mohammeden / Osama Yousif - أنس محمدين / أسامة يوسف'
+	},
+	{
+		name: 'ForeRunners',
+		displayName: 'ForeRunners - سابقون',
+		artist: '`Abd ar-Raḥmān Aṣ-Ṣādiq - عبد الرحمن الصادق'
+	},
+	{
+		name: 'O Month of Fasting',
+		displayName: 'O Month of Fasting - يا شهر الصوم',
+		artist: 'Anas Mohammeden - أنس محمدين'
+	},
+	{
+		name: 'Original Man',
+		displayName: 'Original Man - زول المأصل',
+		artist: 'Khalid Mahjoub / Anas Mohammeden - خالد محجوب / أنس محمدبن'
+	},
+	{
+		name: 'Echo of the PulPit',
+		displayName: 'Echo of the PulPit - صدى المحراب',
+		artist: 'Khalid Mahjoub - خالد محجوب'
 	}
 ];
 let isPlaying = false;
