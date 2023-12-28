@@ -1,6 +1,6 @@
 # Audio-Player
 
-* sleek & modern audio-player
+* sleek & modern audio-player with rich metaData using MediaSession-API
 * click progress-bar to seek different parts of track
 
 ## Stack
