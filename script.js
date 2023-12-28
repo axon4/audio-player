@@ -124,14 +124,15 @@ function upDatePositionState() {
 };
 
 function upDateMetaData() {
-	const { displayName, artist } = playList[index];
+	const { name, displayName, artist } = playList[index];
 
 	navigator.mediaSession.metadata = new MediaMetadata({
 		title: displayName,
 		album: 'Axon4',
 		artist,
 		artwork: [{
-			src: image.src,
+			src: `./images/${name}-512.jpg`,
+			sizes: '512x512',
 			type: 'image/jpg'
 		}]
 	});
