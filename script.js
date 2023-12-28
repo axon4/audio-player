@@ -41,8 +41,8 @@ const audioFiles = [
 		artist: 'AbdiRashid Sufi - عبد الرشيد صوفي'
 	},
 	{
-		name: 'And God is My Strength (Ash-Shāṭibiyyaḣ)',
-		displayName: 'And God is My Strength (Ash-Shāṭibiyyaḣ) - وبالله حولي (الشاطبية)',
+		name: 'God is My Strength (Ash-Shāṭibiyyaḣ)',
+		displayName: 'God is My Strength (Ash-Shāṭibiyyaḣ) - بالله حولي (الشاطبية)',
 		artist: 'AbdiRashid Sufi - عبد الرشيد صوفي'
 	},
 	{
@@ -61,8 +61,8 @@ const audioFiles = [
 		artist: 'AbdiRashid Sufi - عبد الرشيد صوفي'
 	},
 	{
-		name: 'O God, O Lover...',
-		displayName: 'O God, O Lover... - اللهم يا حبيب',
+		name: 'O God, O BeLoved...',
+		displayName: 'O God, O BeLoved... - اللهم يا حبيب',
 		artist: 'AbdiRashid Sufi - عبد الرشيد صوفي'
 	},
 	{
@@ -98,7 +98,7 @@ const audioFiles = [
 	{
 		name: 'Original Man',
 		displayName: 'Original Man - زول المأصل',
-		artist: 'Khalid Mahjoub / Anas Mohammeden - خالد محجوب / أنس محمدبن'
+		artist: 'Khalid Mahjoub / Anas Mohammeden - خالد محجوب / أنس محمدين'
 	},
 	{
 		name: 'Echo of the PulPit',
