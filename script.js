@@ -213,11 +213,11 @@ function nextAudio() {
 
 navigator.mediaSession.setActionHandler('nexttrack', nextAudio);
 
-function stopAudio() {
-	alert('STOP');
-};
+// function stopAudio() {
+// 	alert('STOP');
+// };
 
-navigator.mediaSession.setActionHandler('stop', stopAudio);
+// navigator.mediaSession.setActionHandler('stop', stopAudio);
 
 loadAudio(playList[index]);
 
