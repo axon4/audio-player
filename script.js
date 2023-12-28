@@ -109,6 +109,13 @@ const playList = [
 let isPlaying = false;
 let index = 0;
 
+(async function preLoad() {
+	playList.forEach(({ name }) => {
+		(new Image()).src = `./images/${name}.jpg`;
+		new Audio(`./audio/${name}.mp3`);
+	});
+})();
+
 function upDatePositionState() {
 	navigator.mediaSession.setPositionState({
 		duration: audio.duration,
