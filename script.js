@@ -9,7 +9,7 @@ const durationElement = document.getElementById('duration');
 const buttonPrevious = document.getElementById('previous');
 const buttonPlay = document.getElementById('play');
 const buttonNext = document.getElementById('next');
-const audioFiles = [
+const playList = [
 	{
 		name: 'The Qur\'ān Changed Me',
 		displayName: 'The Qur\'ān Changed Me - القرآن غيرني',
@@ -107,56 +107,111 @@ const audioFiles = [
 	}
 ];
 let isPlaying = false;
-let audioIndex = 0;
+let index = 0;
+
+function upDatePositionState() {
+	navigator.mediaSession.setPositionState({
+		duration: audio.duration,
+		position: audio.currentTime
+	});
+};
+
+function upDateMetaData() {
+	const { displayName, artist } = playList[index];
+
+	navigator.mediaSession.metadata = new MediaMetadata({
+		title: displayName,
+		album: 'Axon4',
+		artist,
+		artwork: [{
+			src: image.src,
+			type: 'image/jpg'
+		}]
+	});
+
+	upDatePositionState();
+};
 
 function playAudio() {
 	isPlaying = true;
+	navigator.mediaSession.playbackState = 'playing';
 
 	buttonPlay.classList.replace('fa-play', 'fa-pause');
 	buttonPlay.setAttribute('title', 'pause');
-	audio.play();
+	audio.play().then(upDateMetaData);
 };
+
+navigator.mediaSession.setActionHandler('play', playAudio);
 
 function pauseAudio() {
 	isPlaying = false;
+	navigator.mediaSession.playbackState = 'paused';
 
 	buttonPlay.classList.replace('fa-pause', 'fa-play');
 	buttonPlay.setAttribute('title', 'play');
 	audio.pause();
 };
 
+navigator.mediaSession.setActionHandler('pause', pauseAudio);
+
 buttonPlay.addEventListener('click', () => {isPlaying ? pauseAudio() : playAudio()});
 
 function loadAudio(file) {
 	title.textContent = file.displayName;
 	artist.textContent = file.artist;
-	audio.src = `./audio/${file.name}.mp3`;
 	image.src = `./images/${file.name}.jpg`;
+	audio.src = `./audio/${file.name}.mp3`;
 };
+
+function skipBackWard(event) {
+	const skipTime = event.seekOffset || 10;
+
+	audio.currentTime = Math.max(audio.currentTime - skipTime, 0);
+
+	upDatePositionState();
+};
+
+navigator.mediaSession.setActionHandler('seekbackward', skipBackWard);
+
+function skipForWard(event) {
+	const skipTime = event.seekOffset || 10;
+
+	audio.currentTime = Math.min(audio.currentTime + skipTime, audio.duration);
+
+	upDatePositionState();
+};
+
+navigator.mediaSession.setActionHandler('seekforward', skipForWard);
 
 function previousAudio() {
-	audioIndex--;
+	index--;
 
-	if (audioIndex < 0) {
-		audioIndex = audioFiles.length - 1;
-	};
+	if (index < 0) index = playList.length - 1;
 
-	loadAudio(audioFiles[audioIndex]);
+	loadAudio(playList[index]);
 	playAudio();
 };
+
+navigator.mediaSession.setActionHandler('previoustrack', previousAudio);
 
 function nextAudio() {
-	audioIndex++;
+	index++;
 
-	if (audioIndex > audioFiles.length - 1) {
-		audioIndex = 0;
-	};
+	if (index > playList.length - 1) index = 0;
 
-	loadAudio(audioFiles[audioIndex]);
+	loadAudio(playList[index]);
 	playAudio();
 };
 
-loadAudio(audioFiles[audioIndex]);
+navigator.mediaSession.setActionHandler('nexttrack', nextAudio);
+
+function stopAudio() {
+	alert('STOP');
+};
+
+navigator.mediaSession.setActionHandler('stop', stopAudio);
+
+loadAudio(playList[index]);
 
 function upDateProgressBar(event) {
 	if (isPlaying) {
@@ -195,6 +250,15 @@ function setProgressBar(event) {
 
 	audio.currentTime = (clickX / width) * duration;
 };
+
+function seek(event) {
+	if (event.fastSeek && 'fastSeek' in audio) audio.fastSeek(event.seekTime);
+	else audio.currentTime = event.seekTime;
+
+	upDatePositionState();
+};
+
+navigator.mediaSession.setActionHandler('seekto', seek);
 
 buttonPrevious.addEventListener('click', previousAudio);
 buttonNext.addEventListener('click', nextAudio);
