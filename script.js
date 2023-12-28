@@ -7,7 +7,9 @@ const progress = document.getElementById('progress');
 const currentTimeElement = document.getElementById('current-time');
 const durationElement = document.getElementById('duration');
 const buttonPrevious = document.getElementById('previous');
+const buttonBackWard = document.getElementById('backWard');
 const buttonPlay = document.getElementById('play');
+const buttonForWard = document.getElementById('forWard');
 const buttonNext = document.getElementById('next');
 const playList = [
 	{
@@ -269,6 +271,8 @@ function seek(event) {
 navigator.mediaSession.setActionHandler('seekto', seek);
 
 buttonPrevious.addEventListener('click', previousAudio);
+buttonBackWard.addEventListener('click', skipBackWard);
+buttonForWard.addEventListener('click', skipForWard);
 buttonNext.addEventListener('click', nextAudio);
 audio.addEventListener('timeupdate', upDateProgressBar);
 audio.addEventListener('ended', nextAudio);

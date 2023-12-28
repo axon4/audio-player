@@ -19,7 +19,9 @@ body {
 
 .player-container {
 	width: 400px;
-	height: 550px;
+	/* height: 550px; */
+	height: auto;
+	padding-bottom: 32px;
 	background-color: #E7E7E7;
 	border-radius: 20px;
 	box-shadow: 0 15px 30px 5px rgba(0, 0, 0, 0.3);
@@ -80,10 +82,13 @@ h3 {
 }
 
 .player-controls {
-	position: relative;
+	/* position: relative;
 	top: -15px;
 	left: 120px;
-	width: 200px;
+	width: 350px; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .fas {
@@ -96,6 +101,10 @@ h3 {
 
 .fas:hover {
 	filter: brightness(80%);
+}
+
+.fas:last-of-type {
+	margin-right: auto;
 }
 
 .main-button {
