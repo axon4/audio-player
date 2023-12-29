@@ -33,8 +33,8 @@ const playList = [
 		artist: 'Aftab Ahmed - أفطاب أحمد'
 	},
 	{
-		name: 'Asmā\' al-Husná (Beautiful Names)',
-		displayName: 'Asmā\' al-Husná (Beautiful Names) - أسماء الحسنى',
+		name: 'Asmā\' al-Ḥusná (Beautiful Names)',
+		displayName: 'Asmā\' al-Ḥusná (Beautiful Names) - أسماء الحسنى',
 		artist: 'Ahmed AlNufais - أحمد النفيس'
 	},
 	{
