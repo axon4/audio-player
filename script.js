@@ -75,17 +75,17 @@ const playList = [
 	{
 		name: 'BeLoved of the Hearts',
 		displayName: 'BeLoved of the Hearts - حبيب القلوب',
-		artist: 'Osama Yousif / Khabbab Al-Amin - أسامة يوسف / خباب الأمين'
+		artist: 'Osama Yousif | Khabbab Al-Amin - أسامة يوسف | خباب الأمين'
 	},
 	{
 		name: 'Know YourSelf',
 		displayName: 'Know YourSelf - أعرف نفسك',
-		artist: 'Anas Mohammeden / Osama Yousif - أنس محمدين / أسامة يوسف'
+		artist: 'Anas Mohammeden | Osama Yousif - أنس محمدين | أسامة يوسف'
 	},
 	{
 		name: 'I Will Get Married',
 		displayName: 'I Will Get Married - حا أزوج',
-		artist: 'Anas Mohammeden / Osama Yousif - أنس محمدين / أسامة يوسف'
+		artist: 'Anas Mohammeden | Osama Yousif - أنس محمدين | أسامة يوسف'
 	},
 	{
 		name: 'ForeRunners',
@@ -100,7 +100,7 @@ const playList = [
 	{
 		name: 'Original Man',
 		displayName: 'Original Man - زول المأصل',
-		artist: 'Khalid Mahjoub / Anas Mohammeden - خالد محجوب / أنس محمدين'
+		artist: 'Khalid Mahjoub | Anas Mohammeden - خالد محجوب | أنس محمدين'
 	},
 	{
 		name: 'Echo of the PulPit',
